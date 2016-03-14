@@ -1,0 +1,22 @@
+	    <aside class="large-3 columns">
+	      <h3>Recent Articles</h3>
+	      <ol>
+	        <% blog.articles[0...10].each do |article| %>
+	          <li><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></li>
+	        <% end %>
+	      </ol>
+
+	      <h3>Tags</h3>
+	      <ol>
+	        <% blog.tags.each do |tag, articles| %>
+	          <li><%= link_to tag, tag_path(tag) %> (<%= articles.size %>)</a></li>
+	        <% end %>
+	      </ol>
+
+	      <h3>By Year</h3>
+	      <ol>
+	        <% blog.articles.group_by {|a| a.date.year }.each do |year, articles| %>
+	          <li><%= link_to year, blog_year_path(year) %> (<%= articles.size %>)</a></li>
+	        <% end %>
+	      </ol>
+	    </aside>	

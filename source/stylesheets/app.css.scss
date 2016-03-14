@@ -1,0 +1,13 @@
+@import "settings";
+@import "foundation";
+
+@font-face {
+    font-family: Entypo;
+    src: url('@font-face/entypo.eot');
+    src: url('@font-face/entypo.eot?#iefix') format('embedded-opentype'),
+    url('@font-face/entypo.woff') format('woff'),
+    url('@font-face/entypo.ttf')  format('truetype'),
+    url('@font-face/entypo.svg#Entypo') format('svg');
+    font-weight:400;
+}
+

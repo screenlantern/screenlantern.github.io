@@ -1,0 +1,23 @@
+<%= partial "/layouts/partials/head" %>
+
+  <body>
+     <header class="blog">
+            <div class="row">
+               
+			</div>
+        </header><!-- End mainHeader -->
+
+    <section class=" blog row">
+
+    <section class="large-12 columns" role="content">
+      <article>
+         <%= yield %>
+      </article>
+    </section>
+
+    </section>
+
+    <%= javascript_include_tag  "all" %>
+
+  </body>
+</html>
